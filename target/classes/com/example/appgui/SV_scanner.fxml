@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<SplitPane dividerPositions="0.07520891364902507" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720" prefWidth="1200" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appgui.AppController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <ChoiceBox fx:id="NicSelector" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="383.0" />
+            <Button fx:id="StartButton" layoutX="419.0" layoutY="13.0" mnemonicParsing="false" onAction="#startButton" text="Start" />
+            <Button fx:id="StopButton" layoutX="482.0" layoutY="13.0" mnemonicParsing="false" onAction="#startButton" text="Stop" />
+         </children></AnchorPane>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ScrollPane prefHeight="661.0" prefWidth="400.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
+            <ScrollPane prefHeight="661.0" prefWidth="400.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
+            <ScrollPane prefHeight="661.0" prefWidth="400.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+  </items>
+</SplitPane>
