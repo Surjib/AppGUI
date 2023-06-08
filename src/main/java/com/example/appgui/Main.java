@@ -1,59 +1,20 @@
 package com.example.appgui;
 
+
 import com.example.appgui.packetStructure.SvPacket;
 import com.example.appgui.pcapFiles.EthernetListener;
 import com.example.appgui.pcapFiles.SvParser;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
 
-import java.net.URL;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.reflections.Reflections.log;
-
-
-public class AppController implements Initializable {
-
-    EthernetListener ethernetListener = new EthernetListener();
-
-    @FXML
-    private Label selectorLabel;
-
-    @FXML
-    private ChoiceBox<String> NicSelector;
-
-
-    public void startButton(ActionEvent event){
-        ethernetListener.start();
-    }
-
-
-    public void stopButton(ActionEvent event){;
-        ethernetListener.stop();
-    }
-
-    //вывод назавания карты в другой метод
-    public void setNic(ActionEvent event){
-        String nic = NicSelector.getValue();
-        ethernetListener.setNickName(nic);
-        log.info("Active NIC: {}", nic);
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
+public class Main {
+    public static void main(String[] args) {
+        EthernetListener ethernetListener = new EthernetListener();
 
         ethernetListener.checkNic();
-
+        ethernetListener.setNickName("VMware Virtual Ethernet Adapter for VMnet1");
         ethernetListener.getNicArray();
-
-        NicSelector.getItems().addAll(ethernetListener.getNicArray());
-        NicSelector.setOnAction(this::setNic);
 
 
         SvParser svParser = new SvParser();
@@ -125,15 +86,17 @@ public class AppController implements Initializable {
                     setSvPckt.add(svPacket);
                     System.out.println(setSvPckt.size());
 
-//                    if (setSvPckt.size() >= 37000) {
-//                        System.out.println(setSvPckt);
-//                    }
+                    if (setSvPckt.size() >= 7000) {
+                        System.out.println(setSvPckt);
+                    }
 
                     curCnt.set(svPacket.get().getSmpValues().getApdu().getSeqASDU().get(i).getSmpCnt());  //update counter else writes packet twice
                 }
             }
+
         });
+
+        ethernetListener.start();
+
     }
-
-
 }
