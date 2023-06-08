@@ -21,6 +21,7 @@ public class EthernetListener {
 
     @Getter @Setter
     private ArrayList<String> nicArray = new ArrayList<>();
+    @Getter @Setter
     private PcapHandle handle;
 
     final List <PacketListener> listeners = new CopyOnWriteArrayList<>();
@@ -41,9 +42,7 @@ public class EthernetListener {
     @SneakyThrows
     public void start(){
         if (nickName != null && !nickName.isEmpty()){
-            if (handle == null) {
-                initializeNetworkInterface();
-
+            //                initializeNetworkInterface();
                 if (handle != null) {
                     String filter = "ether proto 0x88ba";  //  proto 0x88ba = IEC SV
 
@@ -53,7 +52,6 @@ public class EthernetListener {
                         try {
                             log.info("Starting Packet Capturing");
                             handle.loop(0, defaultPacketListener); //packetCount should be x2. 0 for unlimited capture
-                            handle.breakLoop();
                         } catch (PcapNativeException e) {
                             log.info("Finished Packet Capturing");
                         } catch (InterruptedException e) {
@@ -67,7 +65,6 @@ public class EthernetListener {
 
                     captureThread.start();
                 }
-            }
         } else log.error("Select NIC first");
     }
 
@@ -76,13 +73,16 @@ public class EthernetListener {
         if (nickName != null && !nickName.isEmpty()) {
             if (handle != null) {
                 handle.breakLoop();
+//                handle.close();
                 log.info("Packet Capturing Stopped");
+            }else {
+                log.error("Packet Capturing ALREADY Stopped");
             }
         } else log.error("Select NIC first");
     }
 
     @SneakyThrows
-    private void initializeNetworkInterface() {
+    public void initializeNetworkInterface() {
         Optional<PcapNetworkInterface> nic = Pcaps.findAllDevs().stream()
                 .filter(i -> nickName.equals(i.getDescription()))
                 .findFirst();

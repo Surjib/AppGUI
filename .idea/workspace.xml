@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22b73b91-0e60-4cd7-89ee-c8ecbabc0be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/APDU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/ASDU.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/PhsMeas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/Quality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/SampledValues.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/SvPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/EthernetListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/SvParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AppGUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/EthernetListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/EthernetListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/SvParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/SvParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appgui/SV_scanner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appgui/SV_scanner.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" afterDir="false" />
     </list>
@@ -115,7 +99,7 @@
       <updated>1686159746191</updated>
       <workItem from="1686159747863" duration="11308000" />
       <workItem from="1686172718808" duration="2881000" />
-      <workItem from="1686224978070" duration="6995000" />
+      <workItem from="1686224978070" duration="23339000" />
     </task>
     <servers />
   </component>
@@ -138,13 +122,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java</url>
-          <line>125</line>
+          <line>142</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java</url>
           <line>89</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/EthernetListener.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

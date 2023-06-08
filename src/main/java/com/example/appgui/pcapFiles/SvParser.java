@@ -31,11 +31,6 @@ public class SvParser {
 
             result.getSmpValues().setApdu(byteToAPDU(data, 24)); //24 start of apdu
 
-
-
-
-
-
             return Optional.of(result);
         } catch (Exception e) {log.error("Cannot parse SV packet");}
         return Optional.empty();
