@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22b73b91-0e60-4cd7-89ee-c8ecbabc0be0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/AnalogueValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/GenDataAttribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/GenDataObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Quality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Timestamp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Vector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/dataobjects/measurements/CMV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/dataobjects/measurements/MV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/filters/Fourier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/common/LN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/input/LCOM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/measurements/MMXU.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/EthernetListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/EthernetListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/SvParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/SvParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appgui/SV_scanner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appgui/SV_scanner.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" afterDir="false" />
     </list>
@@ -31,24 +44,27 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2Qt4ru2nTEVlWYOHH32yTPbPHmZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/DZ/10sem/Algorythmy RZA/KP/AppGUI&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.33333334&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/DZ/10sem/Algorythmy RZA/KP/AppGUI/src/main/java/com/example/appgui",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.33333334"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\DZ\10sem\Algorythmy RZA\KP\AppGUI\src\main\java\com\example\appgui" />
@@ -61,7 +77,7 @@
       <module name="AppGUI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.appgui.*" />
+          <option name="PATTERN" value="com.example.appgui.common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,7 +90,7 @@
       <module name="AppGUI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.appgui.*" />
+          <option name="PATTERN" value="com.example.appgui.common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,7 +115,7 @@
       <updated>1686159746191</updated>
       <workItem from="1686159747863" duration="11308000" />
       <workItem from="1686172718808" duration="2881000" />
-      <workItem from="1686224978070" duration="23339000" />
+      <workItem from="1686224978070" duration="42259000" />
     </task>
     <servers />
   </component>
@@ -121,13 +137,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java</url>
-          <line>142</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java</url>
-          <line>89</line>
+          <line>12</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -137,5 +148,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((java.util.ArrayList)((HashMap.Node)sourceMap.entrySet().toArray()[0]).getValue()).get(199)" custom="java.util.HashMap.Node,java.util.ArrayList" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

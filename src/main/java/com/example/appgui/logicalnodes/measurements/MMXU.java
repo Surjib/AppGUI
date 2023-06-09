@@ -1,0 +1,56 @@
+package com.example.appgui.logicalnodes.measurements;
+
+
+import com.example.appgui.filters.Fourier;
+import com.example.appgui.packetStructure.PhsMeas;
+import com.example.appgui.packetStructure.SvPacket;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.ArrayList;
+
+/** Узел расчета токов, напряжений, мощностей**/
+public class MMXU {
+
+    /* Пофазно мгновенные значения на вход
+    * Ток*/
+    public ArrayList<double[]> IphsA = new ArrayList<>();
+    public ArrayList<double[]> IphsB = new ArrayList<>();
+    public ArrayList<double[]> IphsC = new ArrayList<>();
+
+    /* Напряжение */
+    public ArrayList<double[]> UphsA = new ArrayList<>();
+    public ArrayList<double[]> UphsB = new ArrayList<>();
+    public ArrayList<double[]> UphsC = new ArrayList<>();
+
+
+    @Setter@Getter
+    private ArrayList<SvPacket> SvPackets = new ArrayList<>();
+
+
+    /* Экземпляры фильтров для каждой фазы *
+    * Ток*/
+    private final Fourier phsACurrent = new Fourier();
+    private final Fourier phsBCurrent = new Fourier();
+    private final Fourier phsCCurrent = new Fourier();
+
+    /* Напряжение*/
+    private final Fourier phsAVoltage = new Fourier();
+    private final Fourier phsBVoltage = new Fourier();
+    private final Fourier phsCVoltage = new Fourier();
+
+
+
+    public void process(PhsMeas value) {
+        /** Фильтрация анлогового сигнала*/
+        IphsA.add(phsACurrent.process(value.getInstIa() / 100d));
+        IphsB.add(phsBCurrent.process(value.getInstIb() / 100d));
+        IphsC.add(phsCCurrent.process(value.getInstIc() / 100d));
+
+        UphsA.add(phsAVoltage.process(value.getInstUa() / 100d));
+        UphsB.add(phsBVoltage.process(value.getInstUb() / 100d));
+        UphsC.add(phsCVoltage.process(value.getInstUc() / 100d));
+
+
+    }
+}
