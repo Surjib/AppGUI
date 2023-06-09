@@ -35,30 +35,30 @@
                   <Text layoutX="14.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SV ID:" textAlignment="CENTER" wrappingWidth="59.8046875" />
                   <Text layoutX="15.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smp Cnt:" textAlignment="CENTER" wrappingWidth="59.8046875" />
                   <Line endX="250.0" layoutX="125.0" layoutY="216.0" startX="-100.0" />
-                  <Text layoutX="14.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ia" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="14.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ib" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="14.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ic" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="14.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ua" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="14.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ub" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="14.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uc" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="15.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ia" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="14.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ib" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="15.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ic" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="15.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ua" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="15.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ub" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="15.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uc" textAlignment="CENTER" wrappingWidth="59.8046875" />
                   <Label fx:id="srcMAC" layoutX="74.0" layoutY="47.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
                   <Label fx:id="dstMAC" layoutX="74.0" layoutY="77.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
                   <Label fx:id="appID" layoutX="74.0" layoutY="107.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
                   <Label fx:id="svID" layoutX="74.0" layoutY="137.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
                   <Label fx:id="smpCnt" layoutX="74.0" layoutY="167.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
-                  <Label fx:id="Ia" layoutX="74.0" layoutY="237.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
-                  <Label fx:id="Ib" layoutX="74.0" layoutY="267.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
-                  <Label fx:id="Ic" layoutX="74.0" layoutY="297.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
-                  <Label fx:id="Ua" layoutX="74.0" layoutY="327.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
-                  <Label fx:id="Ub" layoutX="74.0" layoutY="357.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
-                  <Label fx:id="Uc" layoutX="74.0" layoutY="387.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
-                  <Button fx:id="openGraphs" layoutX="149.0" layoutY="478.0" mnemonicParsing="false" onAction="#openGraphsWindow" prefHeight="25.0" prefWidth="102.0" text="Show graphs" />
-                  <Text layoutX="314.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="314.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="314.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="314.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="314.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В" textAlignment="CENTER" wrappingWidth="59.8046875" />
-                  <Text layoutX="314.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Button fx:id="Ia" layoutX="74.0" layoutY="237.0" onAction="#openGraphsWindowIA" prefHeight="25.0" prefWidth="250.0" textAlignment="CENTER" />
+                  <Button fx:id="Ib" layoutX="74.0" layoutY="267.0" onAction="#openGraphsWindowIB" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER" />
+                  <Button fx:id="Ic" layoutX="74.0" layoutY="297.0" onAction="#openGraphsWindowIC" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER" />
+                  <Button fx:id="Ua" layoutX="74.0" layoutY="327.0" onAction="#openGraphsWindowUA" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER" />
+                  <Button fx:id="Ub" layoutX="74.0" layoutY="357.0" onAction="#openGraphsWindowUB" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER" />
+                  <Button fx:id="Uc" layoutX="74.0" layoutY="387.0" onAction="#openGraphsWindowUC" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER" />
+<!--                  <Button fx:id="openGraphs" layoutX="149.0" layoutY="478.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Show graphs" />-->
+                  <Text layoutX="314.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="314.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="314.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="314.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="314.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В" textAlignment="CENTER" wrappingWidth="59.8046875" />
+                  <Text layoutX="314.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В" textAlignment="CENTER" wrappingWidth="59.8046875" />
                </children></AnchorPane>
          </children></HBox>
   </items>

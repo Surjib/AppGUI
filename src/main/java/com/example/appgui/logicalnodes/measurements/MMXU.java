@@ -43,13 +43,13 @@ public class MMXU {
 
     public void process(PhsMeas value) {
         /** Фильтрация анлогового сигнала*/
-        IphsA.add(phsACurrent.process(value.getInstIa() / 100d));
-        IphsB.add(phsBCurrent.process(value.getInstIb() / 100d));
-        IphsC.add(phsCCurrent.process(value.getInstIc() / 100d));
+        IphsA.add(phsACurrent.process(value.getInstIa() / 1000d));
+        IphsB.add(phsBCurrent.process(value.getInstIb() / 1000d));
+        IphsC.add(phsCCurrent.process(value.getInstIc() / 1000d));
 
-        UphsA.add(phsAVoltage.process(value.getInstUa() / 100d));
-        UphsB.add(phsBVoltage.process(value.getInstUb() / 100d));
-        UphsC.add(phsCVoltage.process(value.getInstUc() / 100d));
+        UphsA.add(phsAVoltage.process(value.getInstUa() / 1000d));
+        UphsB.add(phsBVoltage.process(value.getInstUb() / 1000d));
+        UphsC.add(phsCVoltage.process(value.getInstUc() / 1000d));
 
 
     }

@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22b73b91-0e60-4cd7-89ee-c8ecbabc0be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/GraphController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/appgui/graphWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/GraphController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/GraphController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/measurements/MMXU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/measurements/MMXU.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appgui/SV_scanner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appgui/SV_scanner.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appgui/graphWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appgui/graphWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/graphWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/appgui/graphWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +57,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/DZ/10sem/Algorythmy RZA/KP/AppGUI/src/main/java/com/example/appgui",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33333334"
@@ -111,7 +113,7 @@
       <updated>1686159746191</updated>
       <workItem from="1686159747863" duration="11308000" />
       <workItem from="1686172718808" duration="2881000" />
-      <workItem from="1686224978070" duration="52933000" />
+      <workItem from="1686224978070" duration="60198000" />
     </task>
     <servers />
   </component>
@@ -137,6 +139,10 @@
           <line>12</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

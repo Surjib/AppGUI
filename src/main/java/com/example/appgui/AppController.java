@@ -73,22 +73,22 @@ public class AppController implements Initializable {
 
 
     @FXML
-    private Label Ia;
+    private Button Ia;
 
     @FXML
-    private Label Ib;
+    private Button Ib;
 
     @FXML
-    private Label Ic;
+    private Button Ic;
 
     @FXML
-    private Label Ua;
+    private Button Ua;
 
     @FXML
-    private Label Ub;
+    private Button Ub;
 
     @FXML
-    private Label Uc;
+    private Button Uc;
 
     @FXML
     private Label appID;
@@ -143,39 +143,98 @@ public class AppController implements Initializable {
         allCapturedPackets.clear();
     }
 
-    public void openGraphsWindow(ActionEvent event) throws IOException {
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml")); closes previosus window
-//        Parent root = loader.load();
-//
-//        GraphController graphController = loader.getController();
-//        graphController.displayGraph(sourceMap);
-//
-//        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-//        Scene scene = new Scene(root);
+    public void openGraphsWindowIA(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
         Parent root = loader.load();
 
 
-//        leftWindow.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
-//            @Override
-//            public void changed(ObservableValue observable, Object oldValue, Object newValue) {
-//                try {
-//                    selectedSource = leftWindow.getSelectionModel().getSelectedItem().toString();
-//
-//
-//                } catch (NullPointerException e) {
-//                }
-//            }
-//        });
-
-
         GraphController graphController = loader.getController();
-        graphController.displayGraph(sourceMap.get(selectedSource));
+        graphController.displayGraphIA(sourceMap.get(selectedSource));
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        stage.setTitle("Graph");
+        stage.setTitle("Ia");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void openGraphsWindowIB(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        Parent root = loader.load();
+
+
+        GraphController graphController = loader.getController();
+        graphController.displayGraphIB(sourceMap.get(selectedSource));
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setTitle("Ib");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void openGraphsWindowIC(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        Parent root = loader.load();
+
+
+        GraphController graphController = loader.getController();
+        graphController.displayGraphIC(sourceMap.get(selectedSource));
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setTitle("Ic");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void openGraphsWindowUA(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        Parent root = loader.load();
+
+
+        GraphController graphController = loader.getController();
+        graphController.displayGraphUA(sourceMap.get(selectedSource));
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setTitle("Ua");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void openGraphsWindowUB(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        Parent root = loader.load();
+
+
+        GraphController graphController = loader.getController();
+        graphController.displayGraphUB(sourceMap.get(selectedSource));
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setTitle("Ub");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void openGraphsWindowUC(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        Parent root = loader.load();
+
+
+        GraphController graphController = loader.getController();
+        graphController.displayGraphUC(sourceMap.get(selectedSource));
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setTitle("Uc");
         stage.setScene(scene);
         stage.show();
     }
