@@ -8,14 +8,19 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
-import org.pcap4j.core.PcapNativeException;
-import org.w3c.dom.events.MouseEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -32,7 +37,6 @@ public class AppController implements Initializable {
 
     Set<SvPacket> allCapturedPackets = new LinkedHashSet<>();
 
-    Set<String> srcMacID = new LinkedHashSet<>();
 
     String selectedSource;
 
@@ -99,6 +103,7 @@ public class AppController implements Initializable {
     @FXML
     private Label svID;
 
+    Alert alert = new Alert(Alert.AlertType.WARNING);
 
 
 
@@ -106,12 +111,20 @@ public class AppController implements Initializable {
 //        if (ethernetListener.getHandle() == null){
 //            ethernetListener.initializeNetworkInterface();
 //        }
-        ethernetListener.start();
+        if (currentNic.equals("empty")){
+            alert.setTitle("Incorrect order");
+            alert.setContentText("Select NIC");
+            alert.show();
+        }else ethernetListener.start();
     }
 
 
     public void stopButton(ActionEvent event){;
-        ethernetListener.stop();
+        if (currentNic.equals("empty")){
+            alert.setTitle("Incorrect order");
+            alert.setContentText("Select NIC");
+            alert.show();
+        }else ethernetListener.stop();
     }
 
     public void clearButton(ActionEvent event){;
@@ -128,6 +141,43 @@ public class AppController implements Initializable {
         Ub.setText("");
         Uc.setText("");
         allCapturedPackets.clear();
+    }
+
+    public void openGraphsWindow(ActionEvent event) throws IOException {
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml")); closes previosus window
+//        Parent root = loader.load();
+//
+//        GraphController graphController = loader.getController();
+//        graphController.displayGraph(sourceMap);
+//
+//        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+//        Scene scene = new Scene(root);
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        Parent root = loader.load();
+
+
+//        leftWindow.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
+//            @Override
+//            public void changed(ObservableValue observable, Object oldValue, Object newValue) {
+//                try {
+//                    selectedSource = leftWindow.getSelectionModel().getSelectedItem().toString();
+//
+//
+//                } catch (NullPointerException e) {
+//                }
+//            }
+//        });
+
+
+        GraphController graphController = loader.getController();
+        graphController.displayGraph(sourceMap.get(selectedSource));
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setTitle("Graph");
+        stage.setScene(scene);
+        stage.show();
     }
 
     //вывод назавания карты в другой метод

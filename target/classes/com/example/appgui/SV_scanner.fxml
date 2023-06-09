@@ -52,7 +52,7 @@
                   <Label fx:id="Ua" layoutX="74.0" layoutY="327.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
                   <Label fx:id="Ub" layoutX="74.0" layoutY="357.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
                   <Label fx:id="Uc" layoutX="74.0" layoutY="387.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" />
-                  <Button layoutX="149.0" layoutY="478.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Show graphs" />
+                  <Button fx:id="openGraphs" layoutX="149.0" layoutY="478.0" mnemonicParsing="false" onAction="#openGraphsWindow" prefHeight="25.0" prefWidth="102.0" text="Show graphs" />
                   <Text layoutX="314.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
                   <Text layoutX="314.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
                   <Text layoutX="314.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />

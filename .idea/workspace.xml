@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22b73b91-0e60-4cd7-89ee-c8ecbabc0be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/AnalogueValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/GenDataAttribute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/GenDataObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Quality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Timestamp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Vector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/dataobjects/measurements/CMV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/dataobjects/measurements/MV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/filters/Fourier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/common/LN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/input/LCOM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/measurements/MMXU.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/GraphController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/appgui/graphWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appgui/SV_scanner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appgui/SV_scanner.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" afterDir="false" />
     </list>
@@ -29,6 +17,14 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,7 +111,7 @@
       <updated>1686159746191</updated>
       <workItem from="1686159747863" duration="11308000" />
       <workItem from="1686172718808" duration="2881000" />
-      <workItem from="1686224978070" duration="42259000" />
+      <workItem from="1686224978070" duration="52933000" />
     </task>
     <servers />
   </component>
@@ -140,11 +136,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java</url>
           <line>12</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/EthernetListener.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
