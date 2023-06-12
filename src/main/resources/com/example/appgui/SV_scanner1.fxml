@@ -5,16 +5,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
 <SplitPane dividerPositions="0.075, 0.925" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720" prefWidth="1200" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appgui.AppController">
-   <items>
-      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="1198.0">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="1198.0">
          <children>
             <ComboBox fx:id="NicSelector" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="282.0" promptText="Select NIC" />
             <Button fx:id="StartButton" layoutX="347.0" layoutY="13.0" mnemonicParsing="false" onAction="#startButton" text="Start" />
@@ -23,12 +21,7 @@
       <HBox prefHeight="370.0" prefWidth="1198.0">
          <children>
             <ListView fx:id="leftWindow" prefHeight="661.0" prefWidth="400.0" />
-            <TableView fx:id="centerWindow" prefHeight="661.0" prefWidth="400.0">
-               <columns>
-                  <TableColumn fx:id="packetID" prefWidth="65.0" text="ID" />
-                  <TableColumn fx:id="packetSmp" prefWidth="65.0" text="Smp Cnt" />
-                  <TableColumn fx:id="packetTime" prefWidth="256.0" text="TimeStamp" />
-               </columns></TableView>
+            <ListView fx:id="centerWindow" prefHeight="661.0" prefWidth="400.0" />
             <AnchorPane fx:id="rightWindow" prefHeight="200.0" prefWidth="400.0">
                <children>
                   <Text layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAC Src:" textAlignment="CENTER" wrappingWidth="59.8046875" />
@@ -67,5 +60,5 @@
             <Button fx:id="clearButton1" layoutX="513.0" layoutY="13.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="25.0" prefWidth="172.0" text="Clear" />
          </children>
       </AnchorPane>
-   </items>
+  </items>
 </SplitPane>

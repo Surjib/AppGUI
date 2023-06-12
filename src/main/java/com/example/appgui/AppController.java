@@ -15,6 +15,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
@@ -24,6 +25,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static org.reflections.Reflections.log;
 
@@ -47,11 +50,20 @@ public class AppController implements Initializable {
     private ListView leftWindow;
 
     @FXML
-    private ListView centerWindow;
+    private TableView<TableContent> centerWindow;
 
     @FXML
     private AnchorPane rightWindow;
 
+
+    @FXML
+    private TableColumn<TableContent, Integer> packetID;
+
+    @FXML
+    private TableColumn<TableContent, Integer> packetSmp;
+
+    @FXML
+    private TableColumn<TableContent, String> packetTime;
 
 
 
@@ -127,7 +139,12 @@ public class AppController implements Initializable {
         }else ethernetListener.stop();
     }
 
-    public void clearButton(ActionEvent event){;
+    public void clearButton(ActionEvent event){
+
+        sourceMap.clear();
+        allCapturedPackets.clear();
+
+        leftWindow.getItems().clear();
         centerWindow.getItems().clear();
         srcMAC.setText("");
         dstMAC.setText("");
@@ -140,7 +157,7 @@ public class AppController implements Initializable {
         Ua.setText("");
         Ub.setText("");
         Uc.setText("");
-        allCapturedPackets.clear();
+
     }
 
     public void openGraphsWindowIA(ActionEvent event) throws IOException {
@@ -260,6 +277,9 @@ public class AppController implements Initializable {
         NicSelector.getItems().addAll(ethernetListener.getNicArray());
         NicSelector.setOnAction(this::setNic);
 
+        packetID.setCellValueFactory(new PropertyValueFactory<>("Id"));
+        packetSmp.setCellValueFactory(new PropertyValueFactory<>("SmpCnt"));
+        packetTime.setCellValueFactory(new PropertyValueFactory<>("Timestamp"));
 
         SvParser svParser = new SvParser();
 
@@ -272,8 +292,12 @@ public class AppController implements Initializable {
                 try {
                     selectedSource = leftWindow.getSelectionModel().getSelectedItem().toString();
 
+                    int index = 0;
                     for (SvPacket packet : sourceMap.get(selectedSource).getSvPackets()) {
-                        centerWindow.getItems().add("Packet " + ((int) sourceMap.get(selectedSource).getSvPackets().indexOf(packet) + 1));
+                        index = sourceMap.get(selectedSource).getSvPackets().indexOf(packet);
+                        centerWindow.getItems().add(new TableContent((index + 1), sourceMap.get(selectedSource).getSvPackets().get(index).getSmpValues().getApdu().getSeqASDU().get(0).getSmpCnt(), sourceMap.get(selectedSource).getSvPackets().get(index).getTimestamp()));
+//                        centerWindow.getItems().add( (index + 1) + ") " + "Smp_Cnt: " + sourceMap.get(selectedSource).getSvPackets().get(index).getSmpValues().getApdu().getSeqASDU().get(0).getSmpCnt() + " " + sourceMap.get(selectedSource).getSvPackets().get(index).getTimestamp());
+//                        centerWindow.getItems().add("%d) Smp_Cnt: %s %s" + (index + 1));
                     }
 
                 } catch (NullPointerException e) {
@@ -285,10 +309,10 @@ public class AppController implements Initializable {
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 try {
-                    String selectedPacket = centerWindow.getSelectionModel().getSelectedItem().toString();
+                    int packetNumber = centerWindow.getSelectionModel().getSelectedItem().getId();
 
-                    String[] s = (selectedPacket.split("Packet "));
-                    int packetNumber = (Integer.parseInt(s[1]) - 1);
+//                    String[] s = (selectedPacket.split("\\)" ));
+//                    int packetNumber = Integer.parseInt(s[0]);
 
                     srcMAC.setText(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getMacSrs());
                     srcMAC.setAlignment(Pos.CENTER);
@@ -327,10 +351,7 @@ public class AppController implements Initializable {
                     Uc.setAlignment(Pos.CENTER);
 
 
-
-
-                } catch (NullPointerException e) {
-                }
+                } catch (NullPointerException e) {}
             }
         });
 

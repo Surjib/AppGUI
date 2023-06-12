@@ -17,7 +17,6 @@ public class GraphController {
 
     public void displayGraphIA (MMXU data) {
         if ((data != null)) {
-//            System.out.println(data.IphsA.get(0)[0]); // data received
 
             XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
             int i = 0;
@@ -26,12 +25,13 @@ public class GraphController {
 
                 i += 1;
             }
+            series.setName("Ia");
             graph.getData().add(series);
+            graph.setCreateSymbols(false);
         }
     }
     public void displayGraphIB (MMXU data) {
         if ((data != null)) {
-//            System.out.println(data.IphsB.get(0)[0]); // data received
 
             XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
             int i = 0;
@@ -40,7 +40,9 @@ public class GraphController {
 
                 i += 1;
             }
+            series.setName("Ib");
             graph.getData().add(series);
+            graph.setCreateSymbols(false);
         }
     }
 
@@ -51,10 +53,12 @@ public class GraphController {
             int i = 0;
             for (double[] element : data.IphsC) {
                 series.getData().add(new XYChart.Data<>(i, element[0]));
-
                 i += 1;
             }
+
+            series.setName("Ic");
             graph.getData().add(series);
+            graph.setCreateSymbols(false);
         }
     }
 
@@ -68,7 +72,9 @@ public class GraphController {
 
                 i += 1;
             }
+            series.setName("Ua");
             graph.getData().add(series);
+            graph.setCreateSymbols(false);
         }
     }
 
@@ -83,7 +89,9 @@ public class GraphController {
 
                 i += 1;
             }
+            series.setName("Ub");
             graph.getData().add(series);
+            graph.setCreateSymbols(false);
         }
     }
 
@@ -97,7 +105,9 @@ public class GraphController {
 
                 i += 1;
             }
+            series.setName("Uc");
             graph.getData().add(series);
+            graph.setCreateSymbols(false);
         }
     }
 }

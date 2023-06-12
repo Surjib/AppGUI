@@ -20,6 +20,8 @@ public class SvParser {
 
             SvPacket result = new SvPacket();
 
+            result.setTimestamp(packet.getTimestamp().toString());
+
             result.setMacDst(byteArrayToMac(data, 0));
             result.setMacSrs(byteArrayToMac(data, 6));
             result.setType(twoByteArrayToString(data, 12));

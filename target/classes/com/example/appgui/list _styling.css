@@ -1,0 +1,7 @@
+#leftWindow .list-cell{
+    -fx-alignment: center;
+}
+
+#centerWindow .table-cell{
+    -fx-alignment: center;
+}

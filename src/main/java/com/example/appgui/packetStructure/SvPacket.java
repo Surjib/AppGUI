@@ -11,6 +11,8 @@ public class SvPacket {
 
     private String type;
 
+    private String timestamp;
+
     private SampledValues smpValues = new SampledValues();
 
 

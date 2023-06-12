@@ -14,6 +14,7 @@ public class Application extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("SV_scanner.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(getClass().getResource("list _styling.css").toExternalForm());
 
         Image icon = new Image("D:\\DZ\\10sem\\Algorythmy RZA\\KP\\AppGUI\\src\\main\\resources\\com\\example\\appgui\\logo11.png");
         stage.setTitle("SV traffic app");

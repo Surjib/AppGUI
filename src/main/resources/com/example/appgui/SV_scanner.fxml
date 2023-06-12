@@ -5,28 +5,30 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<SplitPane dividerPositions="0.07520891364902507" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720" prefWidth="1200" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appgui.AppController">
-  <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+<SplitPane dividerPositions="0.075, 0.925" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720" prefWidth="1200" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appgui.AppController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="1198.0">
          <children>
             <ComboBox fx:id="NicSelector" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="282.0" promptText="Select NIC" />
             <Button fx:id="StartButton" layoutX="347.0" layoutY="13.0" mnemonicParsing="false" onAction="#startButton" text="Start" />
             <Button fx:id="StopButton" layoutX="410.0" layoutY="13.0" mnemonicParsing="false" onAction="#stopButton" text="Stop" />
          </children></AnchorPane>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox prefHeight="370.0" prefWidth="1198.0">
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="400.0">
-               <children>
-                  <ListView fx:id="leftWindow" layoutX="50.0" layoutY="231.0" prefHeight="200.0" prefWidth="300.0" />
-                  <Button fx:id="clearButton" layoutX="174.0" layoutY="478.0" mnemonicParsing="false" onAction="#clearButton" text="Clear" />
-               </children>
-            </AnchorPane>
-            <ListView fx:id="centerWindow" prefHeight="661.0" prefWidth="400.0" />
+            <ListView fx:id="leftWindow" prefHeight="661.0" prefWidth="400.0" />
+            <TableView fx:id="centerWindow" prefHeight="661.0" prefWidth="400.0">
+               <columns>
+                  <TableColumn fx:id="packetID" prefWidth="65.0" text="ID" />
+                  <TableColumn fx:id="packetSmp" prefWidth="65.0" text="Smp Cnt" />
+                  <TableColumn fx:id="packetTime" prefWidth="256.0" text="TimeStamp" />
+               </columns></TableView>
             <AnchorPane fx:id="rightWindow" prefHeight="200.0" prefWidth="400.0">
                <children>
                   <Text layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAC Src:" textAlignment="CENTER" wrappingWidth="59.8046875" />
@@ -52,7 +54,6 @@
                   <Button fx:id="Ua" layoutX="74.0" layoutY="327.0" onAction="#openGraphsWindowUA" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER" />
                   <Button fx:id="Ub" layoutX="74.0" layoutY="357.0" onAction="#openGraphsWindowUB" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER" />
                   <Button fx:id="Uc" layoutX="74.0" layoutY="387.0" onAction="#openGraphsWindowUC" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER" />
-<!--                  <Button fx:id="openGraphs" layoutX="149.0" layoutY="478.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Show graphs" />-->
                   <Text layoutX="314.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
                   <Text layoutX="314.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
                   <Text layoutX="314.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="59.8046875" />
@@ -61,5 +62,10 @@
                   <Text layoutX="314.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В" textAlignment="CENTER" wrappingWidth="59.8046875" />
                </children></AnchorPane>
          </children></HBox>
-  </items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="clearButton1" layoutX="513.0" layoutY="13.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="25.0" prefWidth="172.0" text="Clear" />
+         </children>
+      </AnchorPane>
+   </items>
 </SplitPane>
