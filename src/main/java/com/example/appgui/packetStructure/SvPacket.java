@@ -13,7 +13,15 @@ public class SvPacket {
 
     private String timestamp;
 
-    private SampledValues smpValues = new SampledValues();
+    private String appId;
+
+    private int length;
+
+    private String reserved1;
+
+    private String reserved2;
+
+    private APDU apdu = new APDU();
 
 
 }

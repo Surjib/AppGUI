@@ -11,12 +11,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
+
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -25,9 +24,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import static org.reflections.Reflections.log;
 
 
@@ -162,7 +158,7 @@ public class AppController implements Initializable {
 
     public void openGraphsWindowIA(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphWindow.fxml"));
         Parent root = loader.load();
 
 
@@ -178,7 +174,7 @@ public class AppController implements Initializable {
 
     public void openGraphsWindowIB(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphWindow.fxml"));
         Parent root = loader.load();
 
 
@@ -194,7 +190,7 @@ public class AppController implements Initializable {
 
     public void openGraphsWindowIC(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphWindow.fxml"));
         Parent root = loader.load();
 
 
@@ -210,7 +206,7 @@ public class AppController implements Initializable {
 
     public void openGraphsWindowUA(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphWindow.fxml"));
         Parent root = loader.load();
 
 
@@ -226,7 +222,7 @@ public class AppController implements Initializable {
 
     public void openGraphsWindowUB(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphWindow.fxml"));
         Parent root = loader.load();
 
 
@@ -242,7 +238,7 @@ public class AppController implements Initializable {
 
     public void openGraphsWindowUC(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("graphWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphWindow.fxml"));
         Parent root = loader.load();
 
 
@@ -295,8 +291,8 @@ public class AppController implements Initializable {
                     int index = 0;
                     for (SvPacket packet : sourceMap.get(selectedSource).getSvPackets()) {
                         index = sourceMap.get(selectedSource).getSvPackets().indexOf(packet);
-                        centerWindow.getItems().add(new TableContent((index + 1), sourceMap.get(selectedSource).getSvPackets().get(index).getSmpValues().getApdu().getSeqASDU().get(0).getSmpCnt(), sourceMap.get(selectedSource).getSvPackets().get(index).getTimestamp()));
-//                        centerWindow.getItems().add( (index + 1) + ") " + "Smp_Cnt: " + sourceMap.get(selectedSource).getSvPackets().get(index).getSmpValues().getApdu().getSeqASDU().get(0).getSmpCnt() + " " + sourceMap.get(selectedSource).getSvPackets().get(index).getTimestamp());
+                        centerWindow.getItems().add(new TableContent((index + 1), sourceMap.get(selectedSource).getSvPackets().get(index).getApdu().getSeqASDU().get(0).getSmpCnt(), sourceMap.get(selectedSource).getSvPackets().get(index).getTimestamp()));
+//                        centerWindow.getItems().add( (index + 1) + ") " + "Smp_Cnt: " + sourceMap.get(selectedSource).getSvPackets().get(index).getApdu().getSeqASDU().get(0).getSmpCnt() + " " + sourceMap.get(selectedSource).getSvPackets().get(index).getTimestamp());
 //                        centerWindow.getItems().add("%d) Smp_Cnt: %s %s" + (index + 1));
                     }
 
@@ -318,23 +314,23 @@ public class AppController implements Initializable {
                     srcMAC.setAlignment(Pos.CENTER);
                     dstMAC.setText(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getMacDst());
                     dstMAC.setAlignment(Pos.CENTER);
-                    appID.setText(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getAppId());
+                    appID.setText(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getAppId());
                     appID.setAlignment(Pos.CENTER);
-                    svID.setText(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getApdu().getSeqASDU().get(0).getSvID());
+                    svID.setText(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getApdu().getSeqASDU().get(0).getSvID());
                     svID.setAlignment(Pos.CENTER);
-                    smpCnt.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getApdu().getSeqASDU().get(0).getSmpCnt()));
+                    smpCnt.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getApdu().getSeqASDU().get(0).getSmpCnt()));
                     smpCnt.setAlignment(Pos.CENTER);
-//                    Ia.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getApdu().getSeqASDU().get(0).getDataset().getInstIa() / 100d));
+//                    Ia.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getApdu().getSeqASDU().get(0).getDataset().getInstIa() / 100d));
 //                    Ia.setAlignment(Pos.CENTER);
-//                    Ib.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getApdu().getSeqASDU().get(0).getDataset().getInstIb() / 100d));
+//                    Ib.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getApdu().getSeqASDU().get(0).getDataset().getInstIb() / 100d));
 //                    Ib.setAlignment(Pos.CENTER);
-//                    Ic.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getApdu().getSeqASDU().get(0).getDataset().getInstIc() / 100d));
+//                    Ic.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getApdu().getSeqASDU().get(0).getDataset().getInstIc() / 100d));
 //                    Ic.setAlignment(Pos.CENTER);
-//                    Ua.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getApdu().getSeqASDU().get(0).getDataset().getInstUa() / 100d));
+//                    Ua.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getApdu().getSeqASDU().get(0).getDataset().getInstUa() / 100d));
 //                    Ua.setAlignment(Pos.CENTER);
-//                    Ub.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getApdu().getSeqASDU().get(0).getDataset().getInstUb() / 100d));
+//                    Ub.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getApdu().getSeqASDU().get(0).getDataset().getInstUb() / 100d));
 //                    Ub.setAlignment(Pos.CENTER);
-//                    Uc.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getSmpValues().getApdu().getSeqASDU().get(0).getDataset().getInstUc() / 100d));
+//                    Uc.setText(String.valueOf(sourceMap.get(selectedSource).getSvPackets().get(packetNumber).getApdu().getSeqASDU().get(0).getDataset().getInstUc() / 100d));
 //                    Uc.setAlignment(Pos.CENTER);
 
                     Ia.setText(String.valueOf(sourceMap.get(selectedSource).IphsA.get(packetNumber)[0] + "∠" +sourceMap.get(selectedSource).IphsA.get(packetNumber)[1]));
@@ -358,11 +354,11 @@ public class AppController implements Initializable {
 
         ethernetListener.addListener(packet -> {
             Optional<SvPacket> svPacket = svParser.decode(packet);
-            int noASDU = svPacket.get().getSmpValues().getApdu().getNoASDU();
+            int noASDU = svPacket.get().getApdu().getNoASDU();
             for (int i = 0; i < noASDU; i++) {
 
 
-                if (svPacket.isPresent() && curCnt.get() != svPacket.get().getSmpValues().getApdu().getSeqASDU().get(i).getSmpCnt()) {
+                if (svPacket.isPresent() && curCnt.get() != svPacket.get().getApdu().getSeqASDU().get(i).getSmpCnt()) {
 
                     allCapturedPackets.add(svPacket.get());
                     System.out.println(allCapturedPackets.size());
@@ -374,7 +370,7 @@ public class AppController implements Initializable {
                         for (SvPacket data : allCapturedPackets) {
                             String inSert = (
                                     "SrcMAC: " + data.getMacSrs() +
-                                    " SV_ID: " + data.getSmpValues().getApdu().getSeqASDU().get(0).getSvID()
+                                    " SV_ID: " + data.getApdu().getSeqASDU().get(0).getSvID()
                             );
 
                             if (!sourceMap.containsKey(inSert)){
@@ -386,10 +382,10 @@ public class AppController implements Initializable {
                             String[] MacAndID = s[1].split(" SV_ID: ");
 
                             if (data.getMacSrs().equals(MacAndID[0]) &&
-                                    data.getSmpValues().getApdu().getSeqASDU().get(0).getSvID().equals(MacAndID[1]) &&
+                                    data.getApdu().getSeqASDU().get(0).getSvID().equals(MacAndID[1]) &&
                                     !sourceMap.get(inSert).getSvPackets().contains(data)){
                                 sourceMap.get(inSert).getSvPackets().add(data);
-                                sourceMap.get(inSert).process(data.getSmpValues().getApdu().getSeqASDU().get(0).getDataset());
+                                sourceMap.get(inSert).process(data.getApdu().getSeqASDU().get(0).getDataset());
                             }
                         }
                         for (String address : sourceMap.keySet()) {
@@ -402,7 +398,7 @@ public class AppController implements Initializable {
 
 
 
-                    curCnt.set(svPacket.get().getSmpValues().getApdu().getSeqASDU().get(i).getSmpCnt());  //update counter else writes packet twice
+                    curCnt.set(svPacket.get().getApdu().getSeqASDU().get(i).getSmpCnt());  //update counter else writes packet twice
                 }
             }
         });

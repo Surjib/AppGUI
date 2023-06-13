@@ -14,8 +14,6 @@ module com.example.appgui {
 
     opens com.example.appgui to javafx.fxml;
     exports com.example.appgui;
-    exports com.example.appgui.common;
-    opens com.example.appgui.common to javafx.fxml;
     exports com.example.appgui.filters;
     opens com.example.appgui.filters to javafx.fxml;
 }

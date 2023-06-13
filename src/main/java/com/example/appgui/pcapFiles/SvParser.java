@@ -26,12 +26,12 @@ public class SvParser {
             result.setMacSrs(byteArrayToMac(data, 6));
             result.setType(twoByteArrayToString(data, 12));
 
-            result.getSmpValues().setAppId(twoByteArrayToString(data, 14));
-            result.getSmpValues().setLength(byteArrayToInt(data, 16, 2));
-            result.getSmpValues().setReserved1(twoByteArrayToString(data, 18));
-            result.getSmpValues().setReserved2(twoByteArrayToString(data, 20));
+            result.setAppId(twoByteArrayToString(data, 14));
+            result.setLength(byteArrayToInt(data, 16, 2));
+            result.setReserved1(twoByteArrayToString(data, 18));
+            result.setReserved2(twoByteArrayToString(data, 20));
 
-            result.getSmpValues().setApdu(byteToAPDU(data, 24)); //24 start of apdu
+            result.setApdu(byteToAPDU(data, 24)); //24 start of apdu
 
             return Optional.of(result);
         } catch (Exception e) {log.error("Cannot parse SV packet");}

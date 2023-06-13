@@ -1,9 +1,6 @@
 package com.example.appgui.filters;
 
 
-import com.example.appgui.dataobjects.measurements.CMV;
-import com.example.appgui.dataobjects.measurements.MV;
-
 /** Фильтр Фурье**/
 public class Fourier {
 

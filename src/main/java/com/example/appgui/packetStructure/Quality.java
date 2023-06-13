@@ -30,16 +30,4 @@ public class Quality {
     private int operatorBlocked;
 
     private int derived;
-
-//    public enum Validity {
-//        GOOD,
-//        INVALID,
-//        RESERVED,
-//        QUESTIONABLE
-//    }
-//
-//    public enum Source {
-//        PROCESS,
-//        SUBSTITUTED
-//    }
 }
