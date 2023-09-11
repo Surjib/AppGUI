@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22b73b91-0e60-4cd7-89ee-c8ecbabc0be0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
@@ -37,35 +35,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_22.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reflections_reflections_0_10_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppGUI.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/AnalogueValue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/GenDataAttribute.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/GenDataObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Quality.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Timestamp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/common/Vector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/dataobjects/measurements/CMV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/dataobjects/measurements/MV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/filters/Fourier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/filters/Fourier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/common/LN.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/logicalnodes/input/LCOM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/Quality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/Quality.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/SampledValues.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/SvPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/packetStructure/SvPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/SvParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/pcapFiles/SvParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/appgui/graphWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/appgui/GraphWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/SV_scanner1.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/graphWindow.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/list _styling.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/appgui/logo11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/appgui/GraphController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/appgui/GraphController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,33 +67,35 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2Qt4ru2nTEVlWYOHH32yTPbPHmZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last.edited.regexp": "Sample Text",
-    "last_opened_file_path": "D:/DZ/10sem/Algorythmy RZA/KP/AppGUI/src/main/resources/com/example/appgui",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.33333334",
-    "settings.editor.selected.configurable": "preferences.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last.edited.regexp&quot;: &quot;Sample Text&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DZ/10sem/Algorythmy RZA/KP/AppGUI/src/main/resources/com/example/appgui&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.33333334&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\DZ\10sem\Algorythmy RZA\KP\AppGUI\src\main\resources\com\example\appgui" />
@@ -127,7 +105,6 @@
   <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.example.appgui.Application" />
       <module name="AppGUI" />
       <extension name="coverage">
@@ -190,7 +167,7 @@
       <workItem from="1686471998707" duration="13398000" />
       <workItem from="1686586830066" duration="512000" />
       <workItem from="1686587355586" duration="181000" />
-      <workItem from="1686587551311" duration="18380000" />
+      <workItem from="1686587551311" duration="18426000" />
     </task>
     <servers />
   </component>

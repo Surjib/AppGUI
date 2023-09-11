@@ -82,6 +82,11 @@
             <version>1.7.26</version>
         </dependency>
 
+        <dependency>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
+            <version>1.2.1</version>
+        </dependency>
 
 
         <dependency>

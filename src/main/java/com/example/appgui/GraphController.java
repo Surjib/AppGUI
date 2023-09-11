@@ -6,6 +6,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
 import java.security.spec.RSAOtherPrimeInfo;
+import java.util.ArrayList;
 
 public class GraphController {
 
@@ -15,12 +16,12 @@ public class GraphController {
     LineChart<Number, Number> graph;
 
 
-    public void displayGraphIA (MMXU data) {
+    public void displayGraphIA (ArrayList<double[]> data) {
         if ((data != null)) {
 
             XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
             int i = 0;
-            for (double[] element : data.IphsA) {
+            for (double[] element : data) {
                 series.getData().add(new XYChart.Data<>(i, element[0]));
 
                 i += 1;
@@ -30,12 +31,12 @@ public class GraphController {
             graph.setCreateSymbols(false);
         }
     }
-    public void displayGraphIB (MMXU data) {
+    public void displayGraphIB (ArrayList<double[]> data) {
         if ((data != null)) {
 
             XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
             int i = 0;
-            for (double[] element : data.IphsB) {
+            for (double[] element : data) {
                 series.getData().add(new XYChart.Data<>(i, element[0]));
 
                 i += 1;
@@ -46,12 +47,12 @@ public class GraphController {
         }
     }
 
-    public void displayGraphIC (MMXU data) {
+    public void displayGraphIC (ArrayList<double[]> data) {
         if ((data != null)) {
 
             XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
             int i = 0;
-            for (double[] element : data.IphsC) {
+            for (double[] element : data) {
                 series.getData().add(new XYChart.Data<>(i, element[0]));
                 i += 1;
             }
@@ -62,12 +63,12 @@ public class GraphController {
         }
     }
 
-    public void displayGraphUA (MMXU data) {
+    public void displayGraphUA (ArrayList<double[]> data) {
         if ((data != null)) {
 
             XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
             int i = 0;
-            for (double[] element : data.UphsC) {
+            for (double[] element : data) {
                 series.getData().add(new XYChart.Data<>(i, element[0]));
 
                 i += 1;
@@ -79,12 +80,12 @@ public class GraphController {
     }
 
 
-    public void displayGraphUB (MMXU data) {
+    public void displayGraphUB (ArrayList<double[]> data) {
         if ((data != null)) {
 
             XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
             int i = 0;
-            for (double[] element : data.UphsB) {
+            for (double[] element : data) {
                 series.getData().add(new XYChart.Data<>(i, element[0]));
 
                 i += 1;
@@ -95,12 +96,12 @@ public class GraphController {
         }
     }
 
-    public void displayGraphUC (MMXU data) {
+    public void displayGraphUC (ArrayList<double[]> data) {
         if ((data != null)) {
 
             XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
             int i = 0;
-            for (double[] element : data.UphsC) {
+            for (double[] element : data) {
                 series.getData().add(new XYChart.Data<>(i, element[0]));
 
                 i += 1;

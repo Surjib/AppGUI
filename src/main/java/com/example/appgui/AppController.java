@@ -163,7 +163,7 @@ public class AppController implements Initializable {
 
 
         GraphController graphController = loader.getController();
-        graphController.displayGraphIA(sourceMap.get(selectedSource));
+        graphController.displayGraphIA(sourceMap.get(selectedSource).IphsA);
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -179,7 +179,7 @@ public class AppController implements Initializable {
 
 
         GraphController graphController = loader.getController();
-        graphController.displayGraphIB(sourceMap.get(selectedSource));
+        graphController.displayGraphIB(sourceMap.get(selectedSource).IphsB);
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -195,7 +195,7 @@ public class AppController implements Initializable {
 
 
         GraphController graphController = loader.getController();
-        graphController.displayGraphIC(sourceMap.get(selectedSource));
+        graphController.displayGraphIC(sourceMap.get(selectedSource).IphsC);
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -211,7 +211,7 @@ public class AppController implements Initializable {
 
 
         GraphController graphController = loader.getController();
-        graphController.displayGraphUA(sourceMap.get(selectedSource));
+        graphController.displayGraphUA(sourceMap.get(selectedSource).UphsA);
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -227,7 +227,7 @@ public class AppController implements Initializable {
 
 
         GraphController graphController = loader.getController();
-        graphController.displayGraphUB(sourceMap.get(selectedSource));
+        graphController.displayGraphUB(sourceMap.get(selectedSource).UphsB);
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -243,7 +243,7 @@ public class AppController implements Initializable {
 
 
         GraphController graphController = loader.getController();
-        graphController.displayGraphUC(sourceMap.get(selectedSource));
+        graphController.displayGraphUC(sourceMap.get(selectedSource).UphsC);
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
