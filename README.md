@@ -18,4 +18,7 @@
 - Run the application: Execute the main class Application.
 # Running Tests
 - Tests can be run using JUnit.
-# License
+
+![alt text]([http://url/to/img.png](https://github.com/Surjib/AppGUI/blob/main/src/main/resources/com/example/appgui/Screenshot%202025-05-05%20105701.png))
+
+![alt text](https://github.com/Surjib/AppGUI/blob/main/src/main/resources/com/example/appgui/Screenshot%202025-05-05%20105757.png)
